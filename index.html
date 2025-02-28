@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro e Gerenciamento de Patrimônios</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Inclua a biblioteca QuaggaJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +13,6 @@
             <div class="form-row">
                 <label for="codigoBarras">Código de Barras:</label>
                 <input type="text" id="codigoBarras" name="codigoBarras" placeholder="Leia o código de barras" autofocus>
-                <button type="button" id="btnLerCodigo" onclick="iniciarLeitura()">Ler Código de Barras</button>
             </div>
             <div class="form-row">
                 <label for="descricaoPatrimonio">Descrição do Patrimônio:</label>
@@ -66,11 +63,6 @@
             </div>
             <button type="button" id="btnGerarRelatorioSetor" onclick="gerarRelatorioPorSetor()">Gerar Relatório por Setor</button>
         </form>
-
-        <div id="camera-container" style="display: none;">
-            <div id="interactive" class="viewport"></div>
-            <button type="button" onclick="pararLeitura()">Parar Leitura</button>
-        </div>
 
         <div class="resultado" id="resultado"></div>
     </div>
